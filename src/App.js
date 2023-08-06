@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/layouts/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -22,7 +23,7 @@ function App() {
     <div className={`${darkMode ? 'dark' : ''} font-Poppins`}>
       <Navbar dark={handleDarkMode} data={darkMode} />
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Project /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}
