@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import project1 from '../assets/images/project-1.jpg';
 import project2 from '../assets/images//project-2.jpg';
-import { EyeIcon, CodeBracketIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { EyeIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
 
 function Project() {
   const [project, setProject] = useState([

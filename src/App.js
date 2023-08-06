@@ -3,11 +3,12 @@ import Navbar from "./components/layouts/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'dark';
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode === "dark";
   });
 
   const handleDarkMode = () => {
@@ -15,18 +16,20 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem('darkMode', darkMode ? 'dark' : 'light');
+    localStorage.setItem("darkMode", darkMode ? "dark" : "light");
     const localTheme = localStorage.getItem("darkMode");
-    document.querySelector('html').setAttribute("data-theme", localTheme);
+    document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [darkMode]);
-  
+
   return (
-    <div className={`${darkMode ? 'dark' : ''} font-Poppins`}>
+    <div className={`${darkMode ? "dark" : ""} font-Poppins`}>
       <Navbar dark={handleDarkMode} data={darkMode} />
-      <Hero />
-      <About />
-      <Project />
-      {/* <Contact /> */}
+      <main>
+        <Hero />
+        <About />
+        <Project />
+        <Contact />
+      </main>
       {/* <Footer /> */}
     </div>
   );
