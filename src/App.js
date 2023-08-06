@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/layouts/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -15,7 +16,6 @@ function App() {
     localStorage.setItem('darkMode', darkMode ? 'dark' : 'light');
     const localTheme = localStorage.getItem("darkMode");
     document.querySelector('html').setAttribute("data-theme", localTheme);
-    console.log(localTheme)
   }, [darkMode]);
 
   document.querySelector('html').setAttribute("data-theme", "scroll-smooth");
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className={`${darkMode ? 'dark' : ''} font-Poppins`}>
       <Navbar dark={handleDarkMode} data={darkMode} />
-      {/* <Hero /> */}
+      <Hero />
       {/* <About /> */}
       {/* <Project /> */}
       {/* <Contact /> */}
