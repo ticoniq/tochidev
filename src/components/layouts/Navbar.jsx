@@ -58,7 +58,7 @@ function Navbar({ dark, data }) {
               <span className="font-semibold md:font-bold text-lg md:text-xl">TochiDev</span>
             </a>
           </div>
-          <div className="hidden md:flex md:gap-x-16 items-center">
+          <div className="hidden md:flex md:gap-x-16 items-center lg:mr-16">
             {navigation.map((item) => (
               <a
                 key={item.name}

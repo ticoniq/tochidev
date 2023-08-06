@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/layouts/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Project from "./components/Project";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -24,7 +25,7 @@ function App() {
       <Navbar dark={handleDarkMode} data={darkMode} />
       <Hero />
       <About />
-      {/* <Project /> */}
+      <Project />
       {/* <Contact /> */}
       {/* <Footer /> */}
     </div>
