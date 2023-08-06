@@ -47,7 +47,7 @@ function Navbar({ dark, data }) {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="inline-flex items-center justify-center rounded-md text-gray-700"
               onClick={() => setMobileMenuOpen(true)}>
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 dark:text-white" aria-hidden="true" />
@@ -76,9 +76,9 @@ function Navbar({ dark, data }) {
                 checked={data ? "dark" : ""}
               />
               {/* sun icon */}
-              <SunIcon className="text-newDarkYello swap-on w-8" />
+              <SunIcon className="text-newDarkYello swap-on w-6" />
               {/* moon icon */}
-              <MoonIcon className="swap-off  w-8" />
+              <MoonIcon className="swap-off  w-6" />
             </label>
           </div>
         </nav>
