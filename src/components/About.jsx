@@ -30,9 +30,11 @@ function About() {
               feature or website. Look through some of my work and experience!
               If you like what you see and have a project you need coded, don’t
               hesitate to contact me.
+              <br />
+              <br />
+              Email me <br />
+              <span className="font-semibold">tochi@tochidev.com</span>
             </p>
-            Email me <br />
-            <span className="font-semibold">tochi@tochidev.com</span>
           </div>
           <div
             id="accordionFlushExample"
