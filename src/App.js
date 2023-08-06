@@ -17,8 +17,6 @@ function App() {
     const localTheme = localStorage.getItem("darkMode");
     document.querySelector('html').setAttribute("data-theme", localTheme);
   }, [darkMode]);
-
-  document.querySelector('html').setAttribute("data-theme", "scroll-smooth");
   
   return (
     <div className={`${darkMode ? 'dark' : ''} font-Poppins`}>
