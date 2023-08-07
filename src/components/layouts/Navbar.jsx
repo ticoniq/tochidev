@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#hero" },
   { name: "About", href: "#About" },
   { name: "Project", href: "#Project" },
   { name: "Contact", href: "#Contact" },
@@ -36,7 +36,7 @@ function Navbar({ dark, data }) {
 
   return (
     <div
-      className={`bg-new fixed w-full top-0 z-20 bg-white dark:bg-base-100 dark:text-white transition-all duration-200 ${
+      className={`bg-new sticky w-full top-0 z-20 bg-white dark:bg-base-100 dark:text-white transition-all duration-200 ${
         showShadow ? "shadow-md" : ""
       }`}
       id="Home">

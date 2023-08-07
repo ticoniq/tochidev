@@ -39,6 +39,7 @@ function About() {
           <div
             id="accordionFlushExample"
             className="md:w-1/2 text-newDark dark:text-white">
+            
             <ul
               className="mb-5 flex list-none gap-2 flex-row flex-wrap border-b-0 pl-0"
               role="tablist"
