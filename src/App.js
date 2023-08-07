@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -30,7 +31,7 @@ function App() {
         <Project />
         <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
