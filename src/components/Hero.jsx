@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import tochi from "../assets/images/tochi.png";
-import point from "../assets/images/points.png";
 import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
 import { FaAngellist } from "react-icons/fa";
-import {LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
+import { LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
 
 function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-5 relative isolate py-32" id="hero">
+    <section
+      className="max-w-7xl mx-auto px-5 relative isolate py-32"
+      id="hero">
       {/* Flex-container */}
       <div className="flex flex-col space-y-10 items-center mx-auto md:flex-row md:space-y-0">
         {/* Left item */}
@@ -26,16 +27,32 @@ function Hero() {
           </p>
           <div className="flex justify-center items-center gap-5 text-newGray dark:text-white md:justify-start">
             <p className="text-xl">Follow Me</p>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://www.linkedin.com/in/ticoniq/"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FiLinkedin />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://github.com/ticoniq"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FiGithub />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://tochidev.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl hover:text-newDarkYello">
               <FiGlobe />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://wellfound.com/u/tochi-okolie"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FaAngellist />
             </a>
           </div>
