@@ -5,6 +5,7 @@ import {
   CodeBracketIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { LiaEnvelopeSolid } from "react-icons/lia";
 
 import leaderboard from "../assets/images/leaderboard.jpg";
 import bookstore from "../assets/images/bookstore.jpg";
@@ -208,6 +209,19 @@ function Project() {
           </div>
         </div>
       )}
+      <div className="max-w-custom mx-auto px-5 my-20">
+        <div className="flex flex-col p-10 rounded-box place-items-center justify-between bg-newYellow dark:neutral md:flex-row">
+          <h3 className="text-3xl font-semibold text-white">Interested working with me?</h3>
+          <a
+              href="mailto:okolietochi@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+              className="p-3 px-6 text-newDark font-bold bg-white rounded-md flex gap-1 hover:bg-transparent hover:text-white hover:border-2 hover:border-white">
+              <LiaEnvelopeSolid className="text-2xl" />
+              Mail Me
+            </a>
+        </div>
+      </div>
     </div>
   );
 }
