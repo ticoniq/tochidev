@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import {
   EyeIcon,
@@ -8,6 +9,7 @@ import {
 import leaderboard from "../assets/images/leaderboard.jpg";
 import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
+import weather from "../assets/images/weather.jpg";
 
 function Project() {
   const [projects, setProjects] = useState([
@@ -27,6 +29,7 @@ function Project() {
       image: bookstore,
       details:
         "bookstore React JS project is a web application that allows users to browse and purchase books. The project can be built using React JS, a JavaScript library for building user interfaces.",
+      techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
       live: "https://bookstore-ab8fwc2h0-ticoniq.vercel.app",
       source: "https://github.com/ticoniq/bookstore",
     },
@@ -36,19 +39,36 @@ function Project() {
       image: cryptoniq,
       details:
         "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
+      techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
       live: "https://cryptoniq-git-test-ticoniq.vercel.app",
       source: "https://github.com/ticoniq/cryptoniq",
     },
     {
       id: 4,
+      title: "Weather JS 4",
+      image: weather,
+      details:
+        "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
+      techStack: "HTML, CSS, JavaScript, Web-Pack",
+      live: "https://weather-js-delta.vercel.app",
+      source: "https://github.com/ticoniq/weatherJS",
+    },
+    {
+      id: 5,
       title: "Project 4",
       image: leaderboard,
       details:
         "Lorem, ipsum dolor sit amet consectetur       adipisicing elit. Natus, molestiae. Deleniti cum nam accusamus dolor laudantium. Incidunt rerum suscipit facere in porro fugiat alias adipisci quam, autem natus, eaque ad.",
+      techStack: "HTML, CSS, JavaScript, Web-Pack",
       live: "https://bookstore-ab8fwc2h0-ticoniq.vercel.app",
       source: "/",
     },
   ]);
+
+  const techStackToArray = (techStack) => {
+    return techStack ? techStack.split(", ") : [];
+  };
+
 
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
 
@@ -99,7 +119,11 @@ function Project() {
                   </a>
                 </div>
                 <h5 className="mb-4 text-lg font-bold">{item.title}</h5>
-                <h5 className="mb-4 text-lg font-bold">{item.techStack}</h5>
+                {techStackToArray(item.techStack).map((tech, index) => (
+                    <span key={index} className="mr-2 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
+                      {tech}
+                    </span>
+                  ))}
 
                 <div className="mt-4 flex justify-start gap-5 text-sm">
                   <a
