@@ -58,13 +58,17 @@ function Hero() {
           </div>
           <div className="flex flex-wrap justify-center md:justify-start gap-5">
             <a
-              href=""
+              href="mailto:okolietochi@gmail.com"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-6 text-white font-bold bg-newYellow rounded-md flex gap-1 hover:bg-transparent hover:text-newDarkGray hover:border-2 hover:border-newYellow dark:hover:text-white">
               <LiaEnvelopeSolid className="text-2xl" />
               Mail Me
             </a>
             <a
-              href=""
+              href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-4 text-newDarkGray font-bold bg-transparent border-2 border-newYellow rounded-md flex gap-1 dark:text-white hover:bg-newYellow hover:text-white">
               <LiaDownloadSolid className="text-2xl" />
               Download CV
