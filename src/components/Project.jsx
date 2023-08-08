@@ -53,22 +53,11 @@ function Project() {
       live: "https://weather-js-delta.vercel.app",
       source: "https://github.com/ticoniq/weatherJS",
     },
-    {
-      id: 5,
-      title: "Project 4",
-      image: leaderboard,
-      details:
-        "Lorem, ipsum dolor sit amet consectetur       adipisicing elit. Natus, molestiae. Deleniti cum nam accusamus dolor laudantium. Incidunt rerum suscipit facere in porro fugiat alias adipisci quam, autem natus, eaque ad.",
-      techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://bookstore-ab8fwc2h0-ticoniq.vercel.app",
-      source: "/",
-    },
   ]);
 
   const techStackToArray = (techStack) => {
     return techStack ? techStack.split(", ") : [];
   };
-
 
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
 
@@ -118,12 +107,19 @@ function Project() {
                     <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
                   </a>
                 </div>
-                <h5 className="mb-4 text-lg font-bold">{item.title}</h5>
+                <h5 
+                  className="mb-4 text-lg font-bold cursor-pointer hover:text-newYellow dark:text-white dark:hover:text-newYellow" 
+                  onClick={() => openModal(index)}
+                >
+                  {item.title}
+                </h5>
                 {techStackToArray(item.techStack).map((tech, index) => (
-                    <span key={index} className="mr-2 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
-                      {tech}
-                    </span>
-                  ))}
+                  <span
+                    key={index}
+                    className="mr-2 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
+                    {tech}
+                  </span>
+                ))}
 
                 <div className="mt-4 flex justify-start gap-5 text-sm">
                   <a
@@ -151,8 +147,7 @@ function Project() {
 
       {/* Modal Popup */}
       {selectedProjectIndex !== null && (
-        <div
-          className="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-75 p-5 overflow-auto">
+        <div className="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-75 p-5 overflow-auto">
           <div className="max-w-xl p-6 bg-white dark:bg-neutral rounded-lg">
             <div className="flex justify-between items-center">
               <h2 className="text-2xl font-semibold mb-4 dark:text-white">
@@ -170,6 +165,15 @@ function Project() {
             <p className="mt-4 text-newDarkGray dark:text-white">
               {selectedProject.details}
             </p>
+            <div className="my-2">
+              {techStackToArray(selectedProject.techStack).map((tech, index) => (
+                <span
+                  key={index}
+                  className="mr-2 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
+                  {tech}
+                </span>
+              ))}
+            </div>
             <div className="mt-4 flex justify-start gap-5 text-sm">
               <a
                 href={selectedProject.source}
