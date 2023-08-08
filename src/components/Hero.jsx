@@ -8,7 +8,7 @@ import { LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
 function Hero() {
   return (
     <section
-      className="max-w-7xl mx-auto px-5 relative isolate py-32"
+      className="max-w-custom mx-auto px-5 relative isolate py-32"
       id="hero">
       {/* Flex-container */}
       <div className="flex flex-col space-y-10 items-center mx-auto md:flex-row md:space-y-0">

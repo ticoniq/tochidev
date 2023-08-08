@@ -20,10 +20,10 @@ function Contact() {
   };
   
   return (
-    <section id="Contact" className="bg-newbBlue dark:">
-      <div className="max-w-7xl mx-auto px-5 py-20">
+    <section id="Contact" className="bg-newbBlue">
+      <div className="max-w-custom mx-auto px-5 py-20">
           <div className="flex flex-wrap">
-            <div className="w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6 text-white">
+            <div className="w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 text-white">
               <h2 className="mb-6 text-2xl font-bold">Connect with me:</h2>
               <div className="grid grid-cols-1 space-y-10 mb-10 md:mb-0">
                 <div className="w-full shrink-0 grow-0 basis-auto">
@@ -38,7 +38,7 @@ function Contact() {
                         Email
                       </p>
                       <p>
-                        support@example.com
+                        okolietochi@gmail.com
                       </p>
                     </div>
                   </div>
@@ -55,14 +55,14 @@ function Contact() {
                         Phone
                       </p>
                       <p>
-                        +1 234-567-89
+                        +233-237 866 987
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
+            <div className="w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12">
               <h2 className="w-72 mb-6 text-xl font-bold text-white">
                 Contact me, let’s make magic together
               </h2>

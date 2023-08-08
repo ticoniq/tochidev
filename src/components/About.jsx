@@ -19,7 +19,7 @@ function About() {
 
   return (
     <div id="About" className="bg-gray-50 py-20 dark:bg-neutral">
-      <div className="max-w-7xl mx-auto px-5">
+      <div className="max-w-custom mx-auto px-5">
         <div className="card space-y-10 md:flex-row md:flex md:gap-5 md:space-y-0">
           <div className="card-body p-0 md:w-1/2 dark:text-white">
             <h2 className="card-title text-3xl text-newDarkGray dark:text-white">
