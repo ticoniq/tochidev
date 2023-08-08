@@ -63,12 +63,12 @@ To get get a local copy up and running, you can follow these simple steps:
 Clone the repository to your local machine using the following command:
 
 ```sh
-  git clone git@github.com/ticoniq/portfolio
+  git clone git@github.com/ticoniq/tochidev
 ```
 Navigate to the project directory:
 
 ```sh
- cd portfolio
+ cd tochidev
 ```
 
 Open the index.html file in your web browser to view the project:
@@ -84,7 +84,7 @@ That's it! With these simple steps, you should be able to get up and running wit
 
 ### Usage
 
-To use my portfolio, simply visit the following link: https://github.com/ticoniq/Portfolio
+To use my portfolio, simply visit the following link: https://github.com/ticoniq/tochidev
 
 Once you arrive at my portfolio, you can navigate through the different sections using the links provided in the navigation bar. Here is a brief overview of what you can expect to find in each section:
 
