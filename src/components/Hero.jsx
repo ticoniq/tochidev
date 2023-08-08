@@ -22,8 +22,7 @@ function Hero() {
             Full-Stack Developer.
           </h1>
           <p className="max-w-sm mx-auto text-center text-newDarkGray md:text-left md:mx-0 dark:text-white">
-            UX Designer based in Jakarta, Indonesia. I am designing with a
-            minimal and beautiful design in mind.
+            Experienced full-stack developer at your service. I enjoy collaborating with clients to build products and features that truly resonate with users. Let's talk about how we can craft an exceptional experience together..
           </p>
           <div className="flex justify-center items-center gap-5 text-newGray dark:text-white md:justify-start">
             <p className="text-xl">Follow Me</p>
