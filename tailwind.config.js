@@ -36,6 +36,9 @@ module.exports = {
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
       },
+      maxWidth: {
+        'custom': '1100px', // Add your custom max-width value here
+      },
     },
   },
   plugins: [

@@ -42,7 +42,7 @@ function Navbar({ dark, data }) {
       id="Home">
       <header className="inset-x-0 top-0 z-50 dark:bg-base-100">
         <nav
-          className="flex items-center justify-between py-4 max-w-7xl mx-auto px-5"
+          className="flex items-center justify-between py-4 max-w-custom mx-auto px-5"
           aria-label="Global">
           <div className="flex md:hidden">
             <button

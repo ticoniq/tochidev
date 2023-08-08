@@ -13,7 +13,7 @@ function Footer() {
 
   return (
     <div>
-      <footer className="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-8 justify-between items-center dark:text-white md:flex-row">
+      <footer className="max-w-custom mx-auto px-5 py-5 flex flex-col gap-8 justify-between items-center dark:text-white md:flex-row">
         <div>
           <span className="text-xl">Let's Connect</span>
         </div>
