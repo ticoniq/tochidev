@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import tochi from "../assets/images/tochi.png";
-import point from "../assets/images/points.png";
 import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
 import { FaAngellist } from "react-icons/fa";
-import {LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
+import { LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
 
 function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-5 relative isolate py-32" id="hero">
+    <section
+      className="max-w-7xl mx-auto px-5 relative isolate py-32"
+      id="hero">
       {/* Flex-container */}
       <div className="flex flex-col space-y-10 items-center mx-auto md:flex-row md:space-y-0">
         {/* Left item */}
@@ -26,28 +27,48 @@ function Hero() {
           </p>
           <div className="flex justify-center items-center gap-5 text-newGray dark:text-white md:justify-start">
             <p className="text-xl">Follow Me</p>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://www.linkedin.com/in/ticoniq/"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FiLinkedin />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://github.com/ticoniq"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FiGithub />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://tochidev.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl hover:text-newDarkYello">
               <FiGlobe />
             </a>
-            <a href="/" className="text-2xl hover:text-newDarkYello">
+            <a
+              href="https://wellfound.com/u/tochi-okolie"
+              rel="noreferrer"
+              target="_blank"
+              className="text-2xl hover:text-newDarkYello">
               <FaAngellist />
             </a>
           </div>
           <div className="flex flex-wrap justify-center md:justify-start gap-5">
             <a
-              href=""
+              href="mailto:okolietochi@gmail.com"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-6 text-white font-bold bg-newYellow rounded-md flex gap-1 hover:bg-transparent hover:text-newDarkGray hover:border-2 hover:border-newYellow dark:hover:text-white">
               <LiaEnvelopeSolid className="text-2xl" />
               Mail Me
             </a>
             <a
-              href=""
+              href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-4 text-newDarkGray font-bold bg-transparent border-2 border-newYellow rounded-md flex gap-1 dark:text-white hover:bg-newYellow hover:text-white">
               <LiaDownloadSolid className="text-2xl" />
               Download CV
