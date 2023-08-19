@@ -6,9 +6,17 @@ function Blog() {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+        method: "get",
+        headers: myHeaders,
+        redirect: "follow",
+        
+    };
     const getAPIData = async () => {
       try {
-        const response = await axios.get('https://v1.nocodeapi.com/tochino/medium/yYCdTcEUlxhZyCOC');
+        const response = await axios('https://v1.nocodeapi.com/tochino/medium/yYCdTcEUlxhZyCOC', requestOptions);
         const data = response.data;
         setBlogPosts(data);
     
