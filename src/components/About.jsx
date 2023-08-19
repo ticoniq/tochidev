@@ -9,7 +9,7 @@ function About() {
           <h2 className="font-semibold text-4xl mb-3">About Me</h2>
           <p>My introduction</p>
         </article>
-        <div className="card grid grid-cols-2 space-y-10 md:gap-12 md:space-y-0">
+        <div className="card grid grid-cols-1 space-y-10 md:gap-12 md:space-y-0 md:grid-cols-2">
           <figure className="">
             <img src={pic} alt="about-pics" className="h-80 " />
           </figure>
