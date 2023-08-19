@@ -55,7 +55,7 @@ function Navbar({ dark, data }) {
             </button>
           </div>
           <div className="flex lg:flex-1">
-            <a href="#Home" className="">
+            <a href="#hero" className="">
               <span className="font-semibold md:font-bold text-lg md:text-xl">TochiDev</span>
             </a>
           </div>
@@ -91,7 +91,10 @@ function Navbar({ dark, data }) {
           <div className="fixed inset-0 z-50 bg-opacity-90  bg-white dark:bg-base-100 dark:bg-opacity-90" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-5/6 overflow-auto bg-white px-6 py-6 sm:max-w-full dark:bg-base-100">
             <div className="flex items-center justify-between">
-              <a href="/" className="font-bold text-xl dark:text-white">
+              <a 
+                href="#hero" 
+                className="font-bold text-xl dark:text-white"
+                onClick={() => setMobileMenuOpen(false)}>
                 TochiDev
               </a>
               <button

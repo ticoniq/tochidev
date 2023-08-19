@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import {
   EyeIcon,
@@ -56,6 +57,20 @@ function Project() {
     },
   ]);
 
+  const fadeInAnimationVarients = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.01 * index,
+      }
+    }),
+  }
+
   const techStackToArray = (techStack) => {
     return techStack ? techStack.split(", ") : [];
   };
@@ -96,13 +111,33 @@ function Project() {
     <div id="Project">
       <div className="max-w-custom mx-auto px-5 my-28">
         <section className="text-left lg:text-left text-newDark dark:text-white">
-          <article className="mb-16 text-center text-newDarkGray dark:text-white">
+          <motion.article 
+            initial="hidden" 
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}  
+            className="mb-16 text-center text-newDarkGray dark:text-white">
             <h2 className="font-semibold text-4xl mb-3">Portfolio</h2>
             <p>Most recent work</p>
-          </article>
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          </motion.article>
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}  
+            className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((item, index) => (
-              <div className="" key={item.id}>
+              <div
+                className="" 
+                key={item.id}>
                 <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
                   <img src={item.image} alt={item.title} />
                   <a href="#!" onClick={() => openModal(index)}>
@@ -142,14 +177,23 @@ function Project() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </section>
       </div>
 
       {/* Modal Popup */}
       {selectedProjectIndex !== null && (
         <div className="fixed inset-0 grid place-items-center z-50 max-h-full bg-black bg-opacity-75 overflow-y-scroll">
-          <div className="max-w-5xl p-6 bg-white dark:bg-neutral rounded-lg m-5">
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }} 
+            className="max-w-5xl p-6 bg-white dark:bg-neutral rounded-lg m-5">
             <div className="flex justify-end items-center">
               <XMarkIcon className="w-6 cursor-pointer" onClick={closeModal} />
             </div>
@@ -211,7 +255,7 @@ function Project() {
                 Next
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
       <div className="max-w-custom mx-auto px-5 my-28">
