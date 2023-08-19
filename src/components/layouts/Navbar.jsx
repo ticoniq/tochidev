@@ -10,6 +10,7 @@ import {
 const navigation = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#About" },
+  { name: "Skill", href: "#Skill" },
   { name: "Project", href: "#Project" },
   { name: "Contact", href: "#Contact" },
 ];
@@ -84,11 +85,11 @@ function Navbar({ dark, data }) {
         </nav>
         <Dialog
           as="div"
-          className="lg:hidden"
+          className={`${dark ? "dark" : ""} font-Poppins md:hidden`}
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0 z-50 bg-opacity-90  bg-white" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-96 overflow-auto bg-white px-6 py-6 sm:max-w-full dark:bg-base-100">
+          <div className="fixed inset-0 z-50 bg-opacity-90  bg-white dark:bg-base-100 dark:bg-opacity-90" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-5/6 overflow-auto bg-white px-6 py-6 sm:max-w-full dark:bg-base-100">
             <div className="flex items-center justify-between">
               <a href="/" className="font-bold text-xl dark:text-white">
                 TochiDev
@@ -109,7 +110,7 @@ function Navbar({ dark, data }) {
                       key={item.name}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-newDarkYello">
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-newDarkYello dark:text-white">
                       {item.name}
                     </a>
                   ))}
