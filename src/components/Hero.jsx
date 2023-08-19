@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import tochi from "../assets/images/tochi.png";
 import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
 import { FaAngellist } from "react-icons/fa";
-import { LiaEnvelopeSolid, LiaFolderOpen } from "react-icons/lia";
+import { LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -85,10 +85,12 @@ function Hero() {
               Mail Me
             </a>
             <a
-              href="#Project"
+              href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-4 text-newDarkGray font-bold bg-transparent border-2 border-newYellow rounded-md flex gap-1 dark:text-white hover:bg-newYellow hover:text-white">
-              <LiaFolderOpen className="text-2xl" />
-              Portfolio
+              <LiaDownloadSolid className="text-2xl" />
+              Resume
             </a>
           </div>
         </motion.div>

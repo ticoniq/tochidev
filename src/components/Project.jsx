@@ -124,15 +124,7 @@ function Project() {
             <h2 className="font-semibold text-4xl mb-3">Portfolio</h2>
             <p>Most recent work</p>
           </motion.article>
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, y: 0 }
-            }}  
+          <div 
             className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((item, index) => (
               <div
@@ -177,7 +169,7 @@ function Project() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </section>
       </div>
 

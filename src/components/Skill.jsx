@@ -271,7 +271,7 @@ function Skill() {
           </article>
         </div>
       </section>
-      <div className="max-w-custom mx-auto">
+      <div className="max-w-custom mx-auto px-5">
         <hr className="bg-gray-600 dark:bg-gray-300 h-0.5" />
       </div>
     </>
