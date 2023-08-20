@@ -1,11 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import {useEffect} from "react";
 import tochi from "../assets/images/tochi.png";
 import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
 import { FaAngellist } from "react-icons/fa";
-import { LiaEnvelopeSolid, LiaFolderOpen } from "react-icons/lia";
+import { LiaEnvelopeSolid, LiaDownloadSolid } from "react-icons/lia";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Hero() {
+  const animationControls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      animationControls.start({ opacity: 1, y: 0 });
+    }
+  }, [animationControls, inView]);
+  
   return (
     <section
       className="max-w-custom mx-auto px-5 relative isolate py-32"
@@ -13,7 +24,18 @@ function Hero() {
       {/* Flex-container */}
       <div className="flex flex-col space-y-10 items-center mx-auto md:flex-row md:space-y-0">
         {/* Left item */}
-        <div className=" flex flex-col md:w-1/2 space-y-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 }
+          }}
+          ref={ref}
+          animate={animationControls}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className=" flex flex-col md:w-1/2 space-y-8">
           <p className="text-lg text-center text-newGray font-semibold md:text-left dark:text-white">
             Hey!
           </p>
@@ -63,20 +85,31 @@ function Hero() {
               Mail Me
             </a>
             <a
-              href="#Project"
+              href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
               className="p-3 px-4 text-newDarkGray font-bold bg-transparent border-2 border-newYellow rounded-md flex gap-1 dark:text-white hover:bg-newYellow hover:text-white">
-              <LiaFolderOpen className="text-2xl" />
-              Portfolio
+              <LiaDownloadSolid className="text-2xl" />
+              Resume
             </a>
           </div>
-        </div>
-        <figure className="mx-auto md:w-1/2">
+        </motion.div>
+        <motion.figure
+          initial="hidden" 
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 }
+          }}  
+          className="mx-auto md:w-1/2">
           <div className="relative z-0 border border-newGray rounded-full w-64 h-64 md:h-96 md:w-96 mx-auto">
             <div className="absolute -left-5 -top-[4rem] w-64 h-64 bg-newYellow rounded-full my-12 mx-auto overflow-hidden md:h-96 md:w-96 hover:bg-newbBlue">
               <img src={tochi} className="h-full object-cover" alt={tochi} />
             </div>
           </div>
-        </figure>
+        </motion.figure>
       </div>
     </section>
   );
