@@ -85,21 +85,21 @@ function Navbar({ dark, data }) {
         </nav>
         <Dialog
           as="div"
-          className={`${dark ? "dark" : ""} font-Poppins md:hidden`}
+          className={`${data ? "dark" : ""} font-Poppins md:hidden`}
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0 z-50 bg-opacity-90  bg-white dark:bg-base-100 dark:bg-opacity-90" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-5/6 overflow-auto bg-white px-6 py-6 sm:max-w-full dark:bg-base-100">
-            <div className="flex items-center justify-between">
+          <div className="fixed inset-0 z-50 bg-gray-300 bg-opacity-90  bg-red text-gray-700 dark:bg-base-100 dark:bg-opacity-90 dark:text-white" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-5/6 overflow-auto bg-white text-gray-700 px-6 py-6 sm:max-w-full dark:bg-base-100 dark:text-white">
+            <div className="flex items-center justify-between text-gray-700 dark:text-white">
               <a 
                 href="#hero" 
-                className="font-bold text-xl dark:text-white"
+                className="font-bold text-xl text-gray-700 dark:text-white"
                 onClick={() => setMobileMenuOpen(false)}>
                 TochiDev
               </a>
               <button
                 type="button"
-                className="rounded-md p-2.5 text-gray-700"
+                className="rounded-md p-2.5 text-gray-700 dark:text-white"
                 onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -113,7 +113,7 @@ function Navbar({ dark, data }) {
                       key={item.name}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-newDarkYello dark:text-white">
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-newDark hover:text-newDarkYello dark:text-white">
                       {item.name}
                     </a>
                   ))}
