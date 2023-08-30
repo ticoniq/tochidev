@@ -7,8 +7,9 @@ import Project from "./components/Project";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/layouts/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
-function App() {
+function App({ children }) {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
     return savedMode === "dark";
@@ -26,6 +27,8 @@ function App() {
 
   return (
     <div className={`${darkMode ? "dark" : ""} font-Poppins`}>
+      {children}
+      <Analytics />
       <Navbar dark={handleDarkMode} data={darkMode} />
       <main>
         <Hero />
