@@ -32,7 +32,7 @@ function Project() {
       details:
         "bookstore React JS project is a web application that allows users to browse and purchase books. The project can be built using React JS, a JavaScript library for building user interfaces.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://bookstore-ab8fwc2h0-ticoniq.vercel.app",
+      live: "https://bookstore-theta-flax.vercel.app",
       source: "https://github.com/ticoniq/bookstore",
     },
     {
