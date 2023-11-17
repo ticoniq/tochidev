@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div className="flex justify-center items-center gap-5 text-newGray md:justify-start dark:text-white">
           <a
-            href="https://www.linkedin.com/in/ticoniq/"
+            href="https://www.linkedin.com/in/tochinodev/"
             rel="noreferrer"
             target="_blank"
             className="text-2xl hover:text-newDarkYello">
