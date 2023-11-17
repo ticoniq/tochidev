@@ -9,6 +9,7 @@ import {
 import { LiaEnvelopeSolid } from "react-icons/lia";
 
 import leaderboard from "../assets/images/leaderboard.jpg";
+import portfolio from "../assets/images/portfolio.jpg";
 import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
 import weather from "../assets/images/weather.jpg";
@@ -28,6 +29,16 @@ function Project() {
     },
     {
       id: 2,
+      title: "Portfolio Template",
+      image: portfolio,
+      details:
+        "Portfolio template is designed to be user-friendly and easy to navigate. You can learn more about me and my work by exploring the different sections, including my projects, work experience, and education.",
+      techStack: "HTML, CSS, JavaScript",
+      live: "https://portfolio-ticoniq.vercel.app",
+      source: "https://github.com/ticoniq/Portfolio",
+    },
+    {
+      id: 3,
       title: "Bookstore",
       image: bookstore,
       details:
@@ -37,7 +48,7 @@ function Project() {
       source: "https://github.com/ticoniq/bookstore",
     },
     {
-      id: 3,
+      id: 4,
       title: "Cryptoniq",
       image: cryptoniq,
       details:
@@ -47,7 +58,7 @@ function Project() {
       source: "https://github.com/ticoniq/cryptoniq",
     },
     {
-      id: 4,
+      id: 5,
       title: "Weather JS 4",
       image: weather,
       details:
@@ -57,7 +68,7 @@ function Project() {
       source: "https://github.com/ticoniq/weatherJS",
     },
     {
-      id: 5,
+      id: 6,
       title: "Budget Tracker",
       image: budget,
       details:
