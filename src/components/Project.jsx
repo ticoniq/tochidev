@@ -12,6 +12,7 @@ import leaderboard from "../assets/images/leaderboard.jpg";
 import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
 import weather from "../assets/images/weather.jpg";
+import budget from "../assets/images/budget.jpg";
 
 function Project() {
   const [projects, setProjects] = useState([
@@ -55,7 +56,19 @@ function Project() {
       live: "https://weather-js-delta.vercel.app",
       source: "https://github.com/ticoniq/weatherJS",
     },
+    {
+      id: 5,
+      title: "Budget Tracker",
+      image: budget,
+      details:
+        "Budget Tracker is a user-friendly mobile app that empowers individuals to take control of their personal finances. By tracking all transactions in one place, users get an always up-to-date overview of spending - enabling better decisions",
+      techStack: "Ruby, Rails, TailwindCSS, Rspec",
+      live: "https://budgetapp-y18o.onrender.com/",
+      source: "https://github.com/ticoniq/Budget-app",
+    },
   ]);
+
+  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
 
   const fadeInAnimationVarients = {
     initial: {
@@ -67,9 +80,9 @@ function Project() {
       y: 0,
       transition: {
         delay: 0.01 * index,
-      }
+      },
     }),
-  }
+  };
 
   const techStackToArray = (techStack) => {
     return techStack ? techStack.split(", ") : [];
@@ -95,41 +108,38 @@ function Project() {
 
   const prevProject = () => {
     setSelectedProjectIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+      prevIndex === 0 ? sortedProjects.length - 1 : prevIndex - 1
     );
   };
 
   const nextProject = () => {
     setSelectedProjectIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      prevIndex === sortedProjects.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const selectedProject = projects[selectedProjectIndex];
+  const selectedProject = sortedProjects[selectedProjectIndex];
 
   return (
     <div id="Project">
       <div className="max-w-custom mx-auto px-5 my-28">
         <section className="text-left lg:text-left text-newDark dark:text-white">
-          <motion.article 
-            initial="hidden" 
+          <motion.article
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             variants={{
               hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 }
-            }}  
+              visible: { opacity: 1, y: 0 },
+            }}
             className="mb-16 text-center text-newDarkGray dark:text-white">
             <h2 className="font-semibold text-4xl mb-3">Portfolio</h2>
             <p>Most recent work</p>
           </motion.article>
-          <div 
-            className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((item, index) => (
-              <div
-                className="" 
-                key={item.id}>
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+            {sortedProjects.map((item, index) => (
+              <div className="" key={item.id}>
                 <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
                   <img src={item.image} alt={item.title} />
                   <a href="#!" onClick={() => openModal(index)}>
@@ -176,28 +186,31 @@ function Project() {
       {/* Modal Popup */}
       {selectedProjectIndex !== null && (
         <div className="fixed inset-0 grid place-items-center z-50 max-h-full bg-black bg-opacity-75 overflow-y-scroll">
-          <motion.div 
-            initial="hidden" 
+          <motion.div
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             variants={{
               hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 }
-            }} 
-            className="max-w-5xl p-6 bg-white dark:bg-neutral rounded-lg m-5">
-            <div className="flex justify-end items-center">
-              <XMarkIcon className="w-6 cursor-pointer" onClick={closeModal} />
-            </div>
-            <article className="grid grid-cols-1 gap-10 md:grid-cols-2">
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="max-w-5xl bg-white dark:bg-neutral rounded-lg m-5">
+            <article className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <figure>
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full h-full"
                 />
               </figure>
-              <aside>
+              <aside className="p-4">
+                <div className="flex justify-end items-center">
+                  <XMarkIcon
+                    className="w-6 cursor-pointer"
+                    onClick={closeModal}
+                  />
+                </div>
                 <h2 className="text-2xl font-semibold dark:text-white">
                   {selectedProject.title}
                 </h2>
@@ -233,20 +246,20 @@ function Project() {
                     Live Preview
                   </a>
                 </div>
+                <div className="flex justify-between mt-6">
+                  <button
+                    onClick={prevProject}
+                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    Previous
+                  </button>
+                  <button
+                    onClick={nextProject}
+                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    Next
+                  </button>
+                </div>
               </aside>
             </article>
-            <div className="flex justify-between mt-6">
-              <button
-                onClick={prevProject}
-                className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
-                Previous
-              </button>
-              <button
-                onClick={nextProject}
-                className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
-                Next
-              </button>
-            </div>
           </motion.div>
         </div>
       )}

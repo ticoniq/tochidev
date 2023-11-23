@@ -49,7 +49,7 @@ function Hero() {
           <div className="flex justify-center items-center gap-5 text-newGray dark:text-white md:justify-start">
             <p className="text-xl">Follow Me</p>
             <a
-              href="https://www.linkedin.com/in/ticoniq/"
+              href="https://www.linkedin.com/in/tochinodev/"
               rel="noreferrer"
               target="_blank"
               className="text-2xl hover:text-newDarkYello">
