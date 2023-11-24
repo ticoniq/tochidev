@@ -24,7 +24,7 @@ function Project() {
       details:
         "Leaderboard is a way to track the performance of teams in a competitive environment. It is displayed as a list, with the teams ranked by their scores. Leaderboards provide a sense of accomplishment, and to create a sense of community. ",
       techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://leaderboard-git-ui-styling-ticoniq.vercel.app/",
+      live: "https://leaderboard-5318etbmg-ticoniq.vercel.app",
       source: "https://github.com/ticoniq/Leaderboard",
     },
     {
@@ -44,7 +44,7 @@ function Project() {
       details:
         "bookstore React JS project is a web application that allows users to browse and purchase books. The project can be built using React JS, a JavaScript library for building user interfaces.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://bookstore-ab8fwc2h0-ticoniq.vercel.app",
+      live: "https://bookstore-theta-flax.vercel.app",
       source: "https://github.com/ticoniq/bookstore",
     },
     {
@@ -54,7 +54,7 @@ function Project() {
       details:
         "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://cryptoniq-git-test-ticoniq.vercel.app",
+      live: "https://cryptoniq.vercel.app",
       source: "https://github.com/ticoniq/cryptoniq",
     },
     {
