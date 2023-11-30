@@ -153,7 +153,7 @@ function Project() {
               <div className="" key={item.id}>
                 <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
                   <img src={item.image} alt={item.title} />
-                  <a href="#!" onClick={() => openModal(index)}>
+                  <a onClick={() => openModal(index)}>
                     <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
                   </a>
                 </div>
