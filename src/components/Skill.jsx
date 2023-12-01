@@ -19,7 +19,7 @@ import {
   SiVercel, 
   SiDaisyui, 
   SiWebpack, 
-  SiNodedotjs, 
+  // SiNodedotjs, 
   SiRuby, 
   SiRubyonrails, 
   // SiMongodb,
@@ -50,7 +50,7 @@ function Skill() {
     },
     backend: {
       tools: [
-        { name: 'Node.js', icon: <SiNodedotjs /> , color: 'bg-purple-500' },
+        // { name: 'Node.js', icon: <SiNodedotjs /> , color: 'bg-purple-500' },
         { name: 'PHP', icon: <FaPhp /> , color: 'bg-blue-600' },
         { name: 'Ruby', icon: <SiRuby /> , color: 'bg-red-500' },
         { name: 'Laravel', icon: <FaLaravel /> , color: 'bg-red-400' },
