@@ -24,7 +24,7 @@ function Project() {
       details:
         "Leaderboard is a way to track the performance of teams in a competitive environment. It is displayed as a list, with the teams ranked by their scores. Leaderboards provide a sense of accomplishment, and to create a sense of community. ",
       techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://leaderboard-git-ui-styling-ticoniq.vercel.app/",
+      live: "https://leaderboard-5318etbmg-ticoniq.vercel.app",
       source: "https://github.com/ticoniq/Leaderboard",
     },
     {
@@ -54,12 +54,12 @@ function Project() {
       details:
         "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://cryptoniq-git-test-ticoniq.vercel.app",
+      live: "https://cryptoniq.vercel.app",
       source: "https://github.com/ticoniq/cryptoniq",
     },
     {
       id: 5,
-      title: "Weather JS 4",
+      title: "Weather JS",
       image: weather,
       details:
         "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
@@ -153,7 +153,7 @@ function Project() {
               <div className="" key={item.id}>
                 <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
                   <img src={item.image} alt={item.title} />
-                  <a href="#!" onClick={() => openModal(index)}>
+                  <a onClick={() => openModal(index)}>
                     <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
                   </a>
                 </div>
