@@ -50,7 +50,7 @@ function About() {
               <br />
               <br />
               Email me <br />
-              <span className="font-semibold">tochi@tochidev.com</span>
+              <span className="font-semibold">info@tochidev.com</span>
               <div>
                 <a
                   href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
