@@ -8,7 +8,6 @@ import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/layouts/Footer";
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App({ children }) {
   const [darkMode, setDarkMode] = useState(() => {
@@ -29,7 +28,6 @@ function App({ children }) {
   return (
     <div className={`${darkMode ? "dark" : ""} font-Poppins`}>
       {children}
-      <SpeedInsights />
       <Analytics />
       <Navbar dark={handleDarkMode} data={darkMode} />
       <main>
