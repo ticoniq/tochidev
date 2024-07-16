@@ -70,8 +70,8 @@ function Project() {
     },
     {
       id: 7,
-      title: "jobconiq",
-      image: budget,
+      title: "JobConiq",
+      image: jobconiq,
       details:
         "JobConiq is an advanced online job searching platform designed to connect job seekers with potential employers. The platform provides an intuitive interface, powerful search functionalities, and various tools to streamline the job application process.",
       techStack: "Next.js, Typescript, Prisma, PostgreSql, Auth.js TailwindCSS, Shadcn",
