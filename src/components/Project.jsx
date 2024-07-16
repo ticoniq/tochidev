@@ -14,7 +14,7 @@ import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
 import weather from "../assets/images/weather.jpg";
 import budget from "../assets/images/budget.jpg";
-import jobconiq from "../assets/images/jobconiq.png";
+import jobconiq from "../assets/images/jobconiq.jpg";
 
 function Project() {
   const [projects, setProjects] = useState([
