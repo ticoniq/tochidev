@@ -14,6 +14,7 @@ import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
 import weather from "../assets/images/weather.jpg";
 import budget from "../assets/images/budget.jpg";
+import jobconiq from "../assets/images/jobconiq.png";
 
 function Project() {
   const [projects, setProjects] = useState([
@@ -26,16 +27,6 @@ function Project() {
       techStack: "HTML, CSS, JavaScript, Web-Pack",
       live: "https://leaderboard-5318etbmg-ticoniq.vercel.app",
       source: "https://github.com/ticoniq/Leaderboard",
-    },
-    {
-      id: 2,
-      title: "Portfolio Template",
-      image: portfolio,
-      details:
-        "Portfolio template is designed to be user-friendly and easy to navigate. You can learn more about me and my work by exploring the different sections, including my projects, work experience, and education.",
-      techStack: "HTML, CSS, JavaScript",
-      live: "https://portfolio-ticoniq.vercel.app",
-      source: "https://github.com/ticoniq/Portfolio",
     },
     {
       id: 3,
@@ -76,6 +67,16 @@ function Project() {
       techStack: "Ruby, Rails, TailwindCSS, Rspec",
       live: "https://budgetapp-y18o.onrender.com/",
       source: "https://github.com/ticoniq/Budget-app",
+    },
+    {
+      id: 7,
+      title: "jobconiq",
+      image: budget,
+      details:
+        "JobConiq is an advanced online job searching platform designed to connect job seekers with potential employers. The platform provides an intuitive interface, powerful search functionalities, and various tools to streamline the job application process.",
+      techStack: "Next.js, Typescript, Prisma, PostgreSql, Auth.js TailwindCSS, Shadcn",
+      live: "https://www.jobconiq.live/",
+      source: "https://github.com/ticoniq/jobconiq",
     },
   ]);
 
