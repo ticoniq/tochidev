@@ -9,10 +9,9 @@ import {
 import { LiaEnvelopeSolid } from "react-icons/lia";
 
 import leaderboard from "../assets/images/leaderboard.jpg";
-import portfolio from "../assets/images/portfolio.jpg";
 import bookstore from "../assets/images/bookstore.jpg";
 import cryptoniq from "../assets/images/cryptoniq.jpg";
-import weather from "../assets/images/weather.jpg";
+import mjavs from "../assets/images/mjavs.jpg";
 import budget from "../assets/images/budget.jpg";
 import jobconiq from "../assets/images/jobconiq.jpg";
 
@@ -29,7 +28,7 @@ function Project() {
       source: "https://github.com/ticoniq/Leaderboard",
     },
     {
-      id: 3,
+      id: 2,
       title: "Bookstore",
       image: bookstore,
       details:
@@ -39,7 +38,7 @@ function Project() {
       source: "https://github.com/ticoniq/bookstore",
     },
     {
-      id: 4,
+      id: 3,
       title: "Cryptoniq",
       image: cryptoniq,
       details:
@@ -49,17 +48,7 @@ function Project() {
       source: "https://github.com/ticoniq/cryptoniq",
     },
     {
-      id: 5,
-      title: "Weather JS",
-      image: weather,
-      details:
-        "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
-      techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://weather-js-delta.vercel.app",
-      source: "https://github.com/ticoniq/weatherJS",
-    },
-    {
-      id: 6,
+      id: 4,
       title: "Budget Tracker",
       image: budget,
       details:
@@ -69,7 +58,7 @@ function Project() {
       source: "https://github.com/ticoniq/Budget-app",
     },
     {
-      id: 7,
+      id: 5,
       title: "JobConiq",
       image: jobconiq,
       details:
@@ -77,6 +66,16 @@ function Project() {
       techStack: "Next.js, Typescript, Prisma, PostgreSql, Auth.js TailwindCSS, Shadcn",
       live: "https://www.jobconiq.live/",
       source: "https://github.com/ticoniq/jobconiq",
+    },
+    {
+      id: 6,
+      title: "Mjavs",
+      image: mjavs,
+      details:
+        "mjavs enterprises nigeria limited where innovation meets quality in the world of polyvinyl Chloride (PVC). As a leading Company, we are dedicated to redefining standards and delivering cutting-edge PVC solutions that stand the test of time.",
+      techStack: "TailwindCss, React.js, Web-Pack, React Router, Javascript",
+      live: "https://mjavs.org",
+      source: "https://mjavs.org",
     },
   ]);
 
