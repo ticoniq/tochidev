@@ -73,7 +73,7 @@ function Project() {
       image: mjavs,
       details:
         "mjavs enterprises nigeria limited where innovation meets quality in the world of polyvinyl Chloride (PVC). As a leading Company, we are dedicated to redefining standards and delivering cutting-edge PVC solutions that stand the test of time.",
-      techStack: "TailwindCss, React.js, Web-Pack, React Router, Javascript",
+      techStack: "TailwindCss, React.js, React Router, Javascript",
       live: "https://mjavs.org",
       source: "https://mjavs.org",
     },
