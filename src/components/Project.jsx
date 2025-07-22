@@ -45,7 +45,7 @@ function Project() {
         "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
       live: "https://cryptoniq.vercel.app",
-      source: "https://github.com/ticoniq/cryptoniq",
+      source: "https://cryptoniqq.vercel.app",
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ function Project() {
         "JobConiq is an advanced online job searching platform designed to connect job seekers with potential employers. The platform provides an intuitive interface, powerful search functionalities, and various tools to streamline the job application process.",
       techStack: "Next.js, Typescript, Prisma, PostgreSql, Auth.js TailwindCSS, Shadcn",
       live: "https://www.jobconiq.live/",
-      source: "https://github.com/ticoniq/jobconiq",
+      source: "https://jobconiq.vercel.app",
     },
     {
       id: 6,
